@@ -1,0 +1,33 @@
+[tool.pdm]
+[tool.pdm.dev-dependencies]
+dev = [
+    "mypy>=1.2.0",
+    "types-protobuf>=4.22.0.2",
+    "mypy-protobuf>=3.4.0",
+    "ruff>=0.0.263",
+]
+
+[project]
+name = "pygoval"
+version = "0.1.0"
+description = "Goval client in python"
+authors = [
+    {name = "PotentialStyx", email = "xmwmd7uq@duck.com"},
+]
+dependencies = [
+    "six>=1.16.0",
+    "websocket-client>=1.5.1",
+    "aiohttp>=3.8.4",
+    "aiodns>=3.0.0",
+    "requests>=2.29.0",
+]
+requires-python = ">=3.10"
+readme = "README.md"
+license = {text = "MIT"}
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[tool.ruff]
+exclude = ["proto"]
